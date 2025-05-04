@@ -30,4 +30,8 @@ export async function DELETE(request){
     await Topic.findByIdAndDelete(id);
     return NextResponse.json({message: "Topic Deleted"}, {status: 200})
 }
+
+//UPDATE function
+
+
 //use postman to check if api works
