@@ -11,3 +11,13 @@ export async function PUT(request, {params}){
    await Topic.findByIdAndUpdate(id, {title,description})
    return NextResponse.json({message: "Topic updated"}, {status:200})
 }
+
+//get single topic by id
+export async function GET(request, {params}){
+   const {id} = params;
+   await connectMongoDB();
+   const topic = await Topic.findOne({_id: id});
+   return NextResponse.json({topic}, {status: 200});
+
+   //selecting 1 topic using postman http://localhost:3000/api/topics/68188ab55497de9114716ccf
+}
