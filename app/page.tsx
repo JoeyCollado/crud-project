@@ -5,10 +5,7 @@ const page = () => {
   return (
     <>
       <Topics/>
-      <Topics/>
-      <Topics/>
-      <Topics/>
-
+     
       </>
   )
 }
